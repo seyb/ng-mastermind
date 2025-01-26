@@ -5,7 +5,7 @@ type Game = {
   id: UUID;
 }
 
-function makeGame(): Game {
+function startGame(): Game {
   return {
     id: uuid()
   }
@@ -16,10 +16,7 @@ function makeGame(): Game {
   providedIn: 'root'
 })
 export class MastermindGameService {
-
-  constructor() { }
-
-  startGame(): Game {
-    return makeGame();
+  start(): Game {
+    return startGame();
   }
 }

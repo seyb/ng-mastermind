@@ -15,6 +15,6 @@ describe('MastermindGameService', () => {
   });
 
   it('starts a new game', () => {
-    expect(service.startGame()).toBeTruthy();
+    expect(service.start()).toBeTruthy();
   });
 });
