@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {GameStartedEvent, startGame} from '../core/game';
+import {GameStartedEvent, startGameCommand} from '../core/game';
 
 
 @Injectable({
@@ -7,6 +7,6 @@ import {GameStartedEvent, startGame} from '../core/game';
 })
 export class MastermindGameService {
   start(): GameStartedEvent {
-    return startGame();
+    return startGameCommand();
   }
 }
