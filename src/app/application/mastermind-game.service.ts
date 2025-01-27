@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
-import {GameStartedEvent, startGameCommand} from '../core/game';
+
+import {GameStartedEvent, startGameCommand} from '../core/startGameCommand';
 
 
 @Injectable({
