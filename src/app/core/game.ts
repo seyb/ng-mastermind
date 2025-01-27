@@ -1,12 +1,12 @@
 import {Code} from './code';
 
-export type UUID = string;
+export type GameId = string;
 
 export type Game = {
-  id: UUID;
+  id: GameId;
   code: Code;
 }
 
-export function makeGame(id: UUID, code: Code): Game {
+export function makeGame(id: GameId, code: Code): Game {
   return {id, code}
 }
