@@ -4,7 +4,7 @@ import {expect} from 'vitest';
 
 describe('StartGameComponent', () => {
   it('should display', async () => {
-    await render('<app-start-game></app-start-game>');
+    await render(StartGameComponent);
     expect(screen.getAllByRole('button', { name: /Démarrer/i })).toBeTruthy();
   });
 });
