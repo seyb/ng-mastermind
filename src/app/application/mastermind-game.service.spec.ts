@@ -14,7 +14,11 @@ describe('MastermindGameService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('starts a new game', () => {
-    expect(service.start()).toBeTruthy();
+  it('inits with a null game', () => {
+    expect(service.game()).toBe(null);
+  });
+  it('starts a game', () => {
+    service.start();
+    expect(service.game()).toBeTruthy();
   });
 });

@@ -1,13 +1,19 @@
-import {Injectable} from '@angular/core';
+import {Injectable, signal} from '@angular/core';
 
-import {GameStartedEvent, startGameCommand} from '../core/startGameCommand';
+import {startGameCommand} from '../core/start-game.command';
+import {GameModel} from '../core/game.model';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class MastermindGameService {
-  start(): GameStartedEvent {
-    return startGameCommand();
+  readonly game = signal<GameModel | null>(null);
+
+  start(): void {
+    const gameEvent = startGameCommand();
+    if (gameEvent.type === 'gameStarted') {
+      this.game.set(gameEvent.payload);
+    }
   }
 }
