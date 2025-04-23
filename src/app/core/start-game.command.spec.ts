@@ -1,4 +1,4 @@
-import {startGameCommand} from './start-game.command';
+import { startGameCommand } from './start-game.command';
 
 describe('startGameCommand', () => {
   it('starts a game', () => {

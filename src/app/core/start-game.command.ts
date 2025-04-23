@@ -1,8 +1,8 @@
-import {v7 as uuid} from "uuid";
-import {CodeModel, makeCode} from "./code.model";
-import {GameModel, GameId, makeGame} from "./game.model";
+import { v7 as uuid } from 'uuid';
+import { CodeModel, makeCode } from './code.model';
+import { GameModel, GameId, makeGame } from './game.model';
 
-type GameEvent<GameEventType, Payload> = {
+interface GameEvent<GameEventType, Payload> {
   type: GameEventType;
   payload: Payload;
 }
@@ -13,6 +13,6 @@ export function startGameCommand(id?: GameId): GameStartedEvent {
   const code: CodeModel = makeCode();
   return {
     type: 'gameStarted',
-    payload: makeGame(gameId, code)
-  }
+    payload: makeGame(gameId, code),
+  };
 }

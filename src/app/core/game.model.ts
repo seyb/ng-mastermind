@@ -1,12 +1,12 @@
-import {CodeModel} from './code.model';
+import { CodeModel } from './code.model';
 
 export type GameId = string;
 
-export type GameModel = {
+export interface GameModel {
   id: GameId;
   code: CodeModel;
 }
 
 export function makeGame(id: GameId, code: CodeModel): GameModel {
-  return {id, code}
+  return { id, code };
 }

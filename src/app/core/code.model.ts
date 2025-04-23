@@ -1,4 +1,4 @@
-import {ColorModel, randomColor} from "./color.model";
+import { ColorModel, randomColor } from './color.model';
 
 type Position = number;
 export type CodeModel = Map<Position, ColorModel>;
